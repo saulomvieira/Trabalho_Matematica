@@ -1,0 +1,351 @@
+/* ============================= */
+/* VARIÁVEIS CSS */
+/* ============================= */
+:root {
+    --primary: hsl(221, 83%, 53%);
+    --secondary: hsl(262, 83%, 58%);
+    --accent: hsl(280, 83%, 63%);
+    --background: hsl(0, 0%, 100%);
+    --foreground: hsl(222, 47%, 11%);
+    --muted: hsl(210, 40%, 96%);
+    --muted-foreground: hsl(215, 16%, 47%);
+    --card: hsl(0, 0%, 100%);
+    --border: hsl(214, 32%, 91%);
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+    --transition: 0.3s ease;
+}
+
+/* ============================= */
+/* RESET E GLOBAL */
+/* ============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, var(--background) 0%, var(--muted) 50%, var(--background) 100%);
+    min-height: 100vh;
+    color: var(--foreground);
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* CONTAINERS E LAYOUT GERAL */
+/* ============================= */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.6s ease-out forwards;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* ============================= */
+/* TIPOGRAFIA */
+/* ============================= */
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+    margin-bottom: 1.5rem;
+}
+
+.score-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.score-badge I {
+    color: #ffa600c2;
+}
+
+
+/* ============================= */
+/* ÍCONES */
+/* ============================= */
+.brain-icon {
+    background: hsla(221, 83%, 53%, 0.1);
+    padding: 8px;
+    border-radius: 1.5vh;
+    font-size: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-wrapper {
+    width: 3.4rem;
+    height: 3.4rem;
+    background: hsla(221, 83%, 53%, 0.1);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    line-height: 0;
+}
+
+.icon-wrapper i {
+    font-size: 1.8rem;
+}
+
+/* ============================= */
+/* GRID E CARDS */
+/* ============================= */
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.module-card {
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.module-card:hover {
+    color: hsl(263, 70%, 60%);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: hsl(263, 70%, 60%);
+}
+
+/* Conteúdo dos cards */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: var(--muted-foreground);
+    margin-bottom: 1rem;
+}
+
+/* Botão dos cards */
+.card-button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--foreground);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.card-button i {
+    transition: transform 0.3s ease;
+}
+
+.card-button:hover i {
+    transform: translateX(5px);
+}
+
+.module-card:hover .card-button {
+    background: hsl(263, 70%, 60%);
+    color: white;
+}
+
+/* ============================= */
+/* RODAPÉ E DICA */
+/* ============================= */
+.rodape {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.dica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1vh;
+    background: radial-gradient(circle, rgba(186, 229, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(242, 250, 255, 1) 100%);
+    border: 2px solid var(--border);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-sm);
+    padding: 2vh;
+    max-width: 600px;
+}
+
+.dica p {
+    font-size: 0.9rem;
+    color: var(--muted-foreground);
+    margin-bottom: 1rem;
+}
+
+/* Botão de conteúdo teórico */
+.btn-conteudo-teorico {
+    position: relative;
+    /* necessário para o efeito */
+    overflow: hidden;
+    /* impede o efeito de sair para fora */
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s;
+}
+
+/* garante que texto + ícone fiquem acima da animação */
+.btn-conteudo-teorico {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.25rem;
+    background: white;
+    border: 1px solid hsl(240, 6%, 90%);
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--foreground);
+    text-decoration: none;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-conteudo-teorico * {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-conteudo-teorico p {
+    font-size: 1.8vh;
+    margin: 0;
+}
+
+.btn-conteudo-teorico::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: hsl(263, 70%, 95%);
+    width: 0%;
+    z-index: 1;
+    transition: width 0.5s ease;
+}
+
+.btn-conteudo-teorico:hover::before {
+    width: 100%;
+}
+
+.btn-conteudo-teorico:hover {
+    border-color: hsl(263, 70%, 60%);
+    transform: translateX(-2px);
+    box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.1);
+    color: var(--foreground);
+}
+
+.btn-conteudo-teorico i {
+    transition: transform 1s ease;
+}
+
+.btn-conteudo-teorico:hover i {
+    transform: translateX(-5px);
+}
+
+.baseboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-top: 1.5px solid #0000001a;
+    background: #f2f2f2;
+}
+
+.baseboard p {
+    color: var(--muted-foreground);
+}
+
+.baseboard-right {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-size: 3.5vh;
+}
+
+.baseboard-right a {
+    color: #BFC5CC;
+    transition: 0.3s ease;
+}
+
+.baseboard-right a:hover {
+    color: #0A66C2;
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* ============================= */
+/* RESPONSIVO */
+/* ============================= */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 2rem 1rem;
+    }
+}

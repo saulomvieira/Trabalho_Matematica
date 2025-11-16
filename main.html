@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática Interativa</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <section class="container">
+
+        <header class="header">
+            <i class="brain-icon fa-solid fa-brain"></i>
+            <h1 class="title">Matemática Interativa</h1>
+            <p class="subtitle">Aprenda matemática de forma divertida e interativa!</p>
+
+            <div class="score-badge">
+                <i class="fa-solid fa-trophy"></i>
+                <span>Pontuação: <span id="score"></span></span>
+            </div>
+
+        </header>
+
+        <!-- MODULAR CARDS -->
+        <main class="modules-grid">
+
+            <article class="module-card" data-module="sets">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-bolt-lightning"></i>
+                </div>
+                <h3 class="explanation-title">Conjuntos</h3>
+                <p class="card-description">
+                    Aprenda sobre operações com conjuntos e diagramas de Venn
+                </p>
+                <a href="quiz-conjuntos.html" class="card-button">Começar
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </article>
+
+            <article class="module-card" data-module="functions">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <h3 class="card-title">Funções</h3>
+                <p class="card-description">
+                    Explore funções através de gráficos interativos
+                </p>
+                <a class="card-button" href="quiz-funcoes.html">Começar
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </article>
+
+            <article class="module-card" data-module="sequences">
+                <div class="icon-wrapper">
+                    <i class="fa-brands fa-buffer"></i>
+                </div>
+                <h3 class="card-title">Sequências</h3>
+                <p class="card-description">
+                    Descubra padrões em sequências numéricas
+                </p>
+                <a class="card-button" href="quiz-sequencias.html">Começar
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </article>
+
+            <article class="module-card" data-module="sequences">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-dice-six"></i>
+                </div>
+                <h3 class="card-title">Relações</h3>
+                <p class="card-description">
+                    Entenda as propriedades fundamentais em uma relação
+                </p>
+                <a class="card-button" href="quiz-relacoes.html">Começar
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </article>
+        </main>
+
+
+        <section class="rodape">
+
+            <div class="dica">
+                <h4>Dica de aprendizagem</h4>
+                <p>Complete exercícios para ganhar pontos e aprender novas regras.<br>Quanto mais você praticar,
+                    melhor
+                    você aprende!</p>
+            </div>
+
+            <div class="div-conteudo-teorico">
+                <a href="conteudo_teorico.html" class="btn-conteudo-teorico">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Ver conteúdo teórico</p>
+                </a>
+            </div>
+        </section>
+    </section>
+
+    <section class="baseboard">
+        <div class="baseboard-left">
+            <p>© 2025 Saulo Miranda.</p>
+        </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

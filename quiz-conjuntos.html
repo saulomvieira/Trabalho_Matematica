@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Conjuntos | Matemática Interativa</title>
+    <link rel="stylesheet" href="assets/css/quiz-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/js/quiz.js">
+</head>
+
+<body>
+    <div class="container">
+        <div class="div-backbtn">
+            <a class="back-button" href="main.html">
+                <i class="fa-solid fa-arrow-left"></i>
+                Voltar
+            </a>
+        </div>
+
+        <div class="quiz-card" id="quizCard">
+            <div class="quiz-header">
+                <div class="header-content">
+                    <h2>Conjuntos</h2>
+                    <span class="question-counter" id="questionCounter">Questão 1 de 5</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 20%"></div>
+                </div>
+            </div>
+
+            <div class="quiz-content">
+                <h3 class="question" id="question"></h3>
+
+                <div class="options" id="options"></div>
+
+                <div class="quiz-footer">
+                    <span id="currentScore">Pontuação atual: 0</span>
+                    <span>+10 pontos por resposta correta</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-card hidden" id="resultCard">
+            <div class="result-icon">✓</div>
+            <h2>Quiz Completo!</h2>
+            <p class="result-text">Sua pontuação:</p>
+            <p class="result-score" id="finalScore">0 pontos</p>
+            <div class="result-buttons">
+                <a class="btn btn-primary" href="main.html">
+                    Voltar ao Início
+                </a>
+                <button class="btn btn-outline" onclick="restartQuiz()">
+                    Tentar Novamente
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast hidden" id="toast">
+        <span id="toastMessage"></span>
+    </div>
+
+    <script src="assets/js/quiz.js"></script>
+
+    
+</body>
+</html>
